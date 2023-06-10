@@ -101,8 +101,8 @@ public class CustomerServiceImpl implements CustomerService {
 		//Complete the trip having given trip Id and update TripBooking attributes accordingly
 		if(tripBookingRepository2.findById(tripId).isPresent()){
 			TripBooking tripBooking = tripBookingRepository2.findById(tripId).get();
-			tripBooking.getDriver().getCab().setAvailable(true);
 			tripBooking.setStatus(TripStatus.COMPLETED);
+			tripBooking.getDriver().getCab().setAvailable(true);
 			tripBookingRepository2.save(tripBooking);
 
 		}

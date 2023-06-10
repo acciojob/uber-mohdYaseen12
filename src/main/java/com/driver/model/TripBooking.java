@@ -38,7 +38,7 @@ public class TripBooking {
         this.toLocation = toLocation;
         this.distanceInKm = distanceInKm;
         this.status = status;
-//        this.bill = bill;
+
     }
 
     public int getTripBookingId() {
