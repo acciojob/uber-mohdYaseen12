@@ -1,3 +1,5 @@
+package com.driver.model;
+
 import javax.persistence.*;
 
 @Entity
@@ -42,5 +44,16 @@ public class Cab {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+    @JoinColumn
+    @OneToOne
+    Driver driver;
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 }
